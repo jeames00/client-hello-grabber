@@ -1,4 +1,5 @@
-/hellos/**
 *.swp
 *.swo
 *.swn
+/hellos/*
+!/hellos/curl|7.54.0

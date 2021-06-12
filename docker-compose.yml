@@ -7,7 +7,7 @@ services:
         max-size: "10m"
         max-file: "3"
           # command: /go/bin/http-server
-    command: tail -f /dev/null
+    command: /go/bin/https-server
     environment:
       - CERTMAGIC_EMAIL=${CERTMAGIC_EMAIL}
       - CERTMAGIC_DOMAIN=${CERTMAGIC_DOMAIN}
