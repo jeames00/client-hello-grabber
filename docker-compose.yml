@@ -1,0 +1,22 @@
+version: '3.7'
+services:
+  client-hello-grabber:
+    build: .
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"
+          # command: /go/bin/http-server
+    command: tail -f /dev/null
+    environment:
+      - CERTMAGIC_EMAIL=${CERTMAGIC_EMAIL}
+      - CERTMAGIC_DOMAIN=${CERTMAGIC_DOMAIN}
+    entrypoint: /docker-entrypoint.sh  
+    container_name: client-hello-grabber
+    volumes:
+      - type: bind
+        source: ./hellos
+        target: /root/hellos
+    ports:
+      - "80:80"
+      - "443:443"
