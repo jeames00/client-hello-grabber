@@ -6,7 +6,6 @@ services:
       options:
         max-size: "10m"
         max-file: "3"
-          # command: /go/bin/http-server
     command: /go/bin/https-server
     environment:
       - CERTMAGIC_EMAIL=${CERTMAGIC_EMAIL}
