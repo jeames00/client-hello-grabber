@@ -11,6 +11,3 @@ COPY src /src
 WORKDIR /src
 
 RUN go mod init https-server && go mod tidy && go install .
-
-#EXPOSE 80
-#EXPOSE 443
